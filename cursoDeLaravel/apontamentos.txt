@@ -23,9 +23,14 @@ onde tem titulo passa a ser contacts
 
 @include('layout._includes.header') -> inclue o header que está dentro da pasta _includes que esta dentro da pasta layout :D 
 
- 
+
+Models:  
 
 
+	php artisan make:model Contact -m => Cria um model com uma migração(tabela BD) já.
 
+
+Migrations:
+	database_path -> methodo que devolve o path da pasta database 
 
 

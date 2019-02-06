@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use \App\Contact;  // indica o caminho que o model encontra-se, para não precisar usar \App\Contact
+
 class ContactController extends Controller
 {
 
@@ -12,6 +14,17 @@ class ContactController extends Controller
         (object)["name" => "Lívia", "tel" => "927546995"],
         (object)["name" => "Bruna", "tel" => "964586233"],
       ]; // contact List -> array of objects
+
+
+      // to make instance of model
+    //  $contact = new \App\Contact();
+    // dd($contact->list());
+
+
+
+      $contact = new Contact();
+      $con = $contact->list();
+      dd($con->name);
 
       // return view('contact.contact', ["data" => $contacts]);
       return view('contact.contact', compact('contacts'));
