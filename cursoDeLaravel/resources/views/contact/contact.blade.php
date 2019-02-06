@@ -1,14 +1,9 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-        <title>Laravel</title>
+@extends('layout.masterPage')
 
+@section('titulo', 'Contacts')
 
-<!-- Styles -->
+      <!-- Styles -->
 <style>
     html, body {
         background-color: #fff;
@@ -61,38 +56,34 @@
         margin-bottom: 30px;
     }
 </style>
-      </head>
-<body>
 
-    <div class="row flex-center position-ref full-height">
-      <form class='col-md-4' action="/contact" method="post">
-        {{ csrf_field() }}
-        <h1>Form Test</h1>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name='name' aria-describedby="emailHelp" placeholder="Enter name / POST">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+@section('content')
+        <div class="row flex-center position-ref full-height">
+          <form class='col-md-4' action="/contact" method="post">
+            {{ csrf_field() }}
+            <h1>Form Test</h1>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name='name' aria-describedby="emailHelp" placeholder="Enter name / POST">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
 
-      <form class='col-md-4' action="/contact" method="post">
-        {{ csrf_field() }}
-        <h1>Form Test</h1>
-          <div class="form-group">
-            <input type='hidden' name='_method' value='put'>
-            <label for="exampleInputEmail1">Name</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name='name' aria-describedby="emailHelp" placeholder="Enter name / PUT">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-
-
-    </div>
+          <form class='col-md-4' action="/contact" method="post">
+            {{ csrf_field() }}
+            <h1>Form Test</h1>
+              <div class="form-group">
+                <input type='hidden' name='_method' value='put'>
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name='name' aria-describedby="emailHelp" placeholder="Enter name / PUT">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
 
           @foreach($contacts as $contact)
               <p>{{ $contact->name }}</p>
               <p>{{ $contact->tel }}</p>
           @endforeach
 
-</body>
-  </html>
+@endsection('content')
