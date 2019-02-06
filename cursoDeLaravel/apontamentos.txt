@@ -8,4 +8,24 @@ Pasta app:
 
 Rotas: 
 
-Passa-se dois parâmetros, o primeiro é o caminho da rota (O caminho que o utilizador vê na URL ) e o segundo pode ser uma função ou um controller.
+	Passa-se dois parâmetros, o primeiro é o caminho da rota 	(O caminho que o utilizador vê na URL - Rota) e o segundo pode 	ser uma função ou um controller.
+
+
+dd = "<pre>" um var_dump mais bonitinho *-*
+compact('nomeDoArray', 'nomeDoArray') = view('nomeDaView', ["data" => nomeDoArray]) -> para enviar arrays de uma função para view.
+
+@yield('nomeDaVariavel') -> Criar variável pelo blade 
+
+@extends('layout.site') -> Ter acesso à variáveis de outro ficheiros
+
+@section('titulo', 'Contacts') -> Criar uma varável de sessão, 
+onde tem titulo passa a ser contacts 
+
+@include('layout._includes.header') -> inclue o header que está dentro da pasta _includes que esta dentro da pasta layout :D 
+
+ 
+
+
+
+
+
