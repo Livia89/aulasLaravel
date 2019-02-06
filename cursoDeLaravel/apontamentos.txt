@@ -1,0 +1,11 @@
+Pasta app: 
+
+	Toda a configuração do site: 
+		-> Onde fica os Models 
+
+	Http: Controllers 
+
+
+Rotas: 
+
+Passa-se dois parâmetros, o primeiro é o caminho da rota (O caminho que o utilizador vê na URL ) e o segundo pode ser uma função ou um controller.
