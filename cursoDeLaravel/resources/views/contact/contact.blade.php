@@ -63,6 +63,7 @@
 </style>
       </head>
 <body>
+
     <div class="row flex-center position-ref full-height">
       <form class='col-md-4' action="/contact" method="post">
         {{ csrf_field() }}
@@ -84,6 +85,14 @@
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+
     </div>
+
+          @foreach($contacts as $contact)
+              <p>{{ $contact->name }}</p>
+              <p>{{ $contact->tel }}</p>
+          @endforeach
+
 </body>
   </html>
