@@ -24,7 +24,7 @@ class ContactController extends Controller
 
       $contact = new Contact();
       $con = $contact->list();
-      dd($con->name);
+      dd($con);
 
       // return view('contact.contact', ["data" => $contacts]);
       return view('contact.contact', compact('contacts'));

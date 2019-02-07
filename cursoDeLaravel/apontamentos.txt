@@ -34,9 +34,11 @@ Migrations:
 	database_path -> methodo que devolve o path da pasta database 
 
 
-Tinker: 
+Tinker: php artisan tinker
 
 	Para criar registos pela linha de comando
+
+
 
 
 

@@ -8,6 +8,6 @@ use App\Http\Controllers\Controller;
 class CourseController extends Controller
 {
     public function index(){
-      return "index do courses";
+        return view("admin.courses.index");
     }
 }
