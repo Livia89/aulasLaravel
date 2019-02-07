@@ -1,37 +1,37 @@
-Pasta app: 
+Pasta app:
 
-	Toda a configuração do site: 
-		-> Onde fica os Models 
+	Toda a configuraï¿½ï¿½o do site:
+		-> Onde fica os Models
 
-	Http: Controllers 
+	Http: Controllers
 
 
-Rotas: 
+Rotas:
 
-	Passa-se dois parâmetros, o primeiro é o caminho da rota 	(O caminho que o utilizador vê na URL - Rota) e o segundo pode 	ser uma função ou um controller.
+	Passa-se dois parï¿½metros, o primeiro ï¿½ o caminho da rota 	(O caminho que o utilizador vï¿½ na URL - Rota) e o segundo pode 	ser uma funï¿½ï¿½o ou um controller.
 
 
 dd = "<pre>" um var_dump mais bonitinho *-*
-compact('nomeDoArray', 'nomeDoArray') = view('nomeDaView', ["data" => nomeDoArray]) -> para enviar arrays de uma função para view.
+compact('nomeDoArray', 'nomeDoArray') = view('nomeDaView', ["data" => nomeDoArray]) -> para enviar arrays de uma funï¿½ï¿½o para view.
 
-@yield('nomeDaVariavel') -> Criar variável pelo blade 
+@yield('nomeDaVariavel') -> Criar variï¿½vel pelo blade
 
-@extends('layout.site') -> Ter acesso à variáveis de outro ficheiros
+@extends('layout.site') -> Ter acesso ï¿½ variï¿½veis de outro ficheiros
 
-@section('titulo', 'Contacts') -> Criar uma varável de sessão, 
-onde tem titulo passa a ser contacts 
+@section('titulo', 'Contacts') -> Criar uma varï¿½vel de sessï¿½o,
+onde tem titulo passa a ser contacts
 
-@include('layout._includes.header') -> inclue o header que está dentro da pasta _includes que esta dentro da pasta layout :D 
-
-
-Models:  
+@include('layout._includes.header') -> inclue o header que estï¿½ dentro da pasta _includes que esta dentro da pasta layout :D
 
 
-	php artisan make:model Contact -m => Cria um model com uma migração(tabela BD) já.
+Models:
+
+
+	php artisan make:model Contact -m => Cria um model com uma migraï¿½ï¿½o(tabela BD) jï¿½.
 
 
 Migrations:
-	database_path -> methodo que devolve o path da pasta database 
+	database_path -> methodo que devolve o path da pasta database
 
 
 Tinker: php artisan tinker
@@ -39,6 +39,7 @@ Tinker: php artisan tinker
 	Para criar registos pela linha de comando
 
 
+	Passando id por um link -> {{ route('nomeDaRotaAIr', $course->id) }}
 
 
-
+	csrf_field() -> criar um token para os formulÃ¡rios 

@@ -20,6 +20,7 @@
     <header>
 
          <nav>
+             <div class='container'>
                 <div class="nav-wrapper">
                   <a href="#!" class="brand-logo">Learn Laravel</a>
                   <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -29,6 +30,7 @@
 
                   </ul>
                 </div>
+             </div>
             </nav>
 
               <ul class="sidenav" id="mobile">
