@@ -26,6 +26,7 @@ class CourseController extends Controller
           $newCourse = $req->all();
 
           // Verificar se tem uma imagem vindo do post
+
           if($req->hasFile('image')){
               $image = $req->file('image');
               $num = rand(1111,9999);
@@ -58,7 +59,7 @@ class CourseController extends Controller
     public function update(Request $req, $id){
 
       $course = $req->all();
-
+      dd($course);
       if($req->hasFile('image')){
           $image = $req->file('image');
           $num = rand(1111,9999);

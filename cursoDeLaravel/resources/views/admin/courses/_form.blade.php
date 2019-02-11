@@ -22,7 +22,8 @@
   </div>
 
   <div class="file-path-wrapper">
-      <input class="file-path validate" type="text" value='{{asset($course->image)}}'>
+
+      <input class="file-path validate" type="text" value='{{isset($course->image) ? asset($course->image) : ''}}'>
   </div>
 
   @if(isset($course->image))
@@ -39,5 +40,6 @@
         <span>Publicated?</span>
       </label>
     </p>
-
 </div>
+
+<br><br>

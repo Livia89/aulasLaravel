@@ -33,9 +33,12 @@ Route::put('/contact', function(){
 
 */
  // show Home
-Route::get('/', function () {
-    return view('welcome');
+/*Route::get('/', function () {
+    return view('home');
 });
+*/
+
+Route::get('/', ['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
 
 Route::get('/contact/{id?}', ['uses'=>'ContactController@index']); // to send a user to determinated controller  -> nameController@method
 Route::post('/contact', ['uses' => 'ContactController@create']);
