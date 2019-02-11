@@ -24,5 +24,8 @@
     </div>
 
   </div>
+    <div class="row" align="center">
+        {{$courses->links()}}
+    </div>
 
 @endsection

@@ -28,17 +28,27 @@
                   <a href="{{route('site.home')}}" class="brand-logo">Learn Laravel</a>
                   <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                   <ul class="right hide-on-med-and-down">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="{{route('admin.courses')}}">Courses</a></li>
+                      <li><a href="/">Home</a></li>
+                      @if(Auth::guest()) <!--Retorna true se o utilizador não estiver logado no sistema  -->
+                      <li><a href="{{route('site.login')}}">Login</a></li>
+                      @else
+                      <li><a href="{{route('admin.courses')}}">Courses</a></li>
+                      <li><a href="#">{{Auth::user()->name}}</a></li>
+                      <li><a href="{{route('site.login.loggout')}}">Loggout</a></li>
+                      @endif
 
                   </ul>
-                </div>
-             </div>
-            </nav>
-
-              <ul class="sidenav" id="mobile">
-                <li><a href="/">Home</a></li>
-                <li><a href="{{route('admin.courses')}}">Courses</a></li>
-               </ul>
-
-    </header>
+                  <ul class="sidenav" id="mobile">
+                      <li><a href="/">Home</a></li>
+                      @if(Auth::guest()) <!--Retorna true se o utilizador não estiver logado no sistema  -->
+                      <li><a href="{{route('site.login')}}">Login</a></li>
+                      @else
+                      <li><a href="{{route('admin.courses')}}">Courses</a></li>
+                      <li><a href="#">{{Auth::user()->name}}</a></li>
+                      <li><a href="{{route('site.login.loggout')}}">Loggout</a></li>
+                      @endif
+                </ul>
+          </div>
+       </div>
+      </nav>
+  </header>
