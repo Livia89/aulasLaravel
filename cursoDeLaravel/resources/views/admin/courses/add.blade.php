@@ -8,18 +8,12 @@
 
   <div class='container'>
       <h3 class='center'>Add course</h3>
-      <div class="row">
+      <div>
           <form class="" action="{{route('admin.save.courses')}}" method="post" enctype="multipart/form-data">
               {{ csrf_field() }}
-
               @include('admin.courses._form')
-              <button type="btn deep-orange" name="button">Save</button>
+              <button class="btn deep-orange">Save</button>
           </form>
       </div>
-
   </div>
-
-
-
-
 @endsection

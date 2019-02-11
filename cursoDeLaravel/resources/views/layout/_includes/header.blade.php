@@ -33,7 +33,7 @@
              </div>
             </nav>
 
-              <ul class="sidenav" id="mobile">
+              <ul class="sidenav" id="mobile"> 
                 <li><a href="/">Home</a></li>
                 <li><a href="{{route('admin.courses')}}">Courses</a></li>
                </ul>

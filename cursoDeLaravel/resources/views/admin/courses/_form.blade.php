@@ -15,26 +15,27 @@
     <label>Price</label>
 </div>
 
-<div class="input-field">
-  <div class="btn btn-red">
+<div class="file-field input-field">
+  <div class="btn blue">
     <span>Imagem</span>
     <input type="file" name="image">
-    <div class="file-path-wrapper">
-        <input class="file-path validate" type="text" placeholder="Upload one or more files">
-      </div>
   </div>
+
+  <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" value='{{asset($course->image)}}'>
+  </div>
+
+  @if(isset($course->image))
+  <div class="input-field">
+      <img width='150' src="{{asset($course->image)}}">
+  </div>
+  @endif
 </div>
 
-@if(isset($course->image))
-<div class="input-field">
-    <img width='150' src="{{asset($course->image)}}">
-</div>
-@endif
-  <br><br>
 <div class="input-field">
    <p>
       <label>
-        <input type="checkbox" class="filled-in" {{ isset($course->publicated) && $course-publicated == 'sim' ? 'checked' : "" }} value='true' />
+        <input type="checkbox" value='true' name='publicated'  class="filled-in" {{ (isset($course->publicated) && $course->publicated == "sim") ? "checked" : "" }} />
         <span>Publicated?</span>
       </label>
     </p>
