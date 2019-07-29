@@ -18,11 +18,20 @@
 <div class="file-field input-field">
   <div class="btn blue">
     <span>Imagem</span>
+<<<<<<< HEAD
     <input type="file" name="image" >
   </div>
 
   <div class="file-path-wrapper">
       <input class="file-path validate" type="text" value="{{isset($course->image) ? $course->image : ''}}">
+=======
+    <input type="file" name="image">
+  </div>
+
+  <div class="file-path-wrapper">
+
+      <input class="file-path validate" type="text" value='{{isset($course->image) ? asset($course->image) : ''}}'>
+>>>>>>> 94486e7f70bae02aa18c199cea50e6913f5717a8
   </div>
 
   @if(isset($course->image))
@@ -39,5 +48,6 @@
         <span>Publicated?</span>
       </label>
     </p>
-
 </div>
+
+<br><br>

@@ -12,6 +12,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         $data = [
           'name'=> 'Lívia3',
           'email'=> 'admin@mail.com',
@@ -26,5 +27,23 @@ class UserSeeder extends Seeder
             User::create($data);
           echo "Usuario Criado";
         }
+=======
+
+        $userData = [
+            'name'=> 'Lívia',
+            'email'=> 'admin@mail.com',
+            'password'=> bcrypt('123456')
+          ];
+
+          if(User::where('email', '=', $userData['email'])->count()){
+              $user = User::where('email', '=', $userData['email'])->first();
+              $user->update($userData);
+              echo "atuaalizado";
+          }else{
+                User::Create($userData);
+                echo "criado";
+          }
+
+>>>>>>> 94486e7f70bae02aa18c199cea50e6913f5717a8
     }
 }
