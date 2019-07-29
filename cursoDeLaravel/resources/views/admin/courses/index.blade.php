@@ -22,13 +22,14 @@
             <tbody>
               @foreach($allCourses as $course)
               <tr>
+                 <td>{{$course->id}}</td>
                  <td>{{$course->nameCourse}}</td>
                  <td>{{$course->description}}</td>
                  <td><img width='120' src="{{asset($course->image)}}" alt='{{$course->nameCourse}}'/> </td>
-                 <td>{{$course->Publicated}}</td>
+                 <td>{{$course->publicated}}</td>
                  <td>
-                      <a class='btn' href="{{ route('admin.edit.courses', $course->id) }}">Edit</a>
-                      <a class='btn red' href="{{ route('admin.delete.courses', $course->id) }}">Delete</a>
+                      <a class='btn deep-orange' href="{{ route('admin.edit.courses', $course->id) }}">Edit</a>
+                      <a class='btn red' href="{{ route('admin.delete.courses', $course->id) }}" onclick="return confirm('Are you sure?')">Delete</a>
                  </td>
               </tr>
 
@@ -37,11 +38,9 @@
           </table>
       </div>
 
-      <div class="row">
+      <div>
           <a class='btn blue' href="{{route('admin.add.courses')}}">Add Course</a>
       </div>
   </div>
-
-
 
 @endsection

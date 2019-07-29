@@ -19,7 +19,7 @@ class CreateCoursesTable extends Migration
             $table->string('description');
             $table->string('image');
             $table->decimal('price',5,2);
-            $table->enum('publicado',['sim', 'nao'])->default('nao');
+            $table->enum('publicated',['sim', 'nao'])->default('nao');
 
             $table->timestamps();
         });

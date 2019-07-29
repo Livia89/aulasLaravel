@@ -22,7 +22,7 @@
          <nav>
              <div class='container'>
                 <div class="nav-wrapper">
-                  <a href="#!" class="brand-logo">Learn Laravel</a>
+                  <a href="{{route('site.home')}}" class="brand-logo">Learn Laravel</a>
                   <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                   <ul class="right hide-on-med-and-down">
                     <li><a href="/">Home</a></li>
